@@ -1,0 +1,55 @@
+.topo{
+    background-color: #3a3a3a;
+    padding: 5px 20px;
+    height: 80px;
+    width: 100%;
+}
+
+.topo div{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    position: relative;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo img{
+    width: 70px;
+}
+
+.logo button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: 'santello';
+    font-size: 1.1rem;
+}
+
+.hora{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btnIndice{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 200px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #242424;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}

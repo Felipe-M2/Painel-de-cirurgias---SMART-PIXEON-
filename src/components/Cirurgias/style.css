@@ -1,0 +1,62 @@
+.cirurgias{
+    height: calc(100vh - 80px);
+    display: flex;
+    padding: 20px 10px;
+    gap: 10px;
+    max-width: 100%;
+    overflow-y: auto;
+    position: relative;
+}
+
+.salaNome{
+    min-width: 300px;
+    background-color: #3a3a3a;
+    border-radius: 20px;
+    padding: 20px 10px 40px 10px;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+}
+
+.cardCir{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    overflow: auto;
+}
+
+.cardCir::-webkit-scrollbar {
+    width: 10px;
+    padding: 3px;
+}
+
+.cardCir::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.cardCir::-webkit-scrollbar-thumb {
+    max-width: 7px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 2px solid #b1b1b1;
+}
+
+.cardCir::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+.tituloSala{
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: 'santello';
+}
+
+.modalIndiceHome{
+    position: absolute;
+    top: 85px;
+    left: 220px;
+    z-index: 15;
+}

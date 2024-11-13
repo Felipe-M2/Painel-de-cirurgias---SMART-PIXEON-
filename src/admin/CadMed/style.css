@@ -1,0 +1,23 @@
+.cadMed{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.medList{
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    position: relative;
+}
+
+.corMedCad{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-color: red;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
