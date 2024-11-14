@@ -3,6 +3,8 @@ import axios from 'axios';
 import './style.css';
 import Card from '../Card/index';
 
+import { CorMed, DataCirurgias, IdCirCon } from '../../Controller';
+
 const Cirurgias = ({setAdmin}) => {
     const [data, setData] = useState([]);
     const [idCon, setIdCon] = useState([]);
@@ -11,14 +13,22 @@ const Cirurgias = ({setAdmin}) => {
     const [loadingData, setLoadingData] = useState(true);
 
     const fetchDataCor = async () => {
-        try {
-            const reqCor = await axios.get('http://192.168.2.121:7000/cormed');
-            setCor(reqCor.data);
-        } catch (error) {
-            console.error("Error fetching colors:", error);
-        } finally {
+        // try {
+        //     const reqCor = await axios.get('http://192.168.2.121:7000/cormed');
+        //     setCor(reqCor.data);
+        // } catch (error) {
+        //     console.error("Error fetching colors:", error);
+        // } finally {
+        //     setLoadingCor(false);
+        // }
+
+        const fetchDataCorTeste = async()=>{
+            const data = await CorMed();
+            setCor(data);
             setLoadingCor(false);
         }
+
+        fetchDataCorTeste();
     };
 
     const keyPress = (event) =>{
@@ -29,11 +39,11 @@ const Cirurgias = ({setAdmin}) => {
 
     const fetchData = async () => {
         try {
-            const responseId = await axios.get('http://192.168.2.121:7000/circonidpac');
-            const ids = responseId.data.map(item => item.id_pac);
+            const responseId = await IdCirCon();
+            const ids = responseId.map(item => item.id_pac);
 
-            const responseData = await axios.get('http://192.168.2.121:7000/dados');
-            const filteredData = responseData.data.filter(dataCard =>
+            const responseData = await DataCirurgias();
+            const filteredData = responseData.filter(dataCard =>
                 !ids.includes(dataCard.AGM_PAC)
             );
 

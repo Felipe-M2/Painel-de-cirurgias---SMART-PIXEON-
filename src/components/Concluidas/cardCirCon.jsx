@@ -3,8 +3,6 @@ import axios from 'axios';
 
 const CardCirCon = ({ data, fetchData }) => {
 
-    console.log(data);
-
     const handleDelete = async (key) =>{
         try{
             const response = await axios.delete(`http://192.168.2.121:7000/deletecon/${key}`);
@@ -44,11 +42,6 @@ const CardCirCon = ({ data, fetchData }) => {
                 </div>
 
                 <div>
-                    {/* <p>
-                        <span>Inicio:</span>
-                        {data.horaInicio}
-                    </p> */}
-
                     <p>
                         <span>Fim:</span>
                         {data.hora_con}
