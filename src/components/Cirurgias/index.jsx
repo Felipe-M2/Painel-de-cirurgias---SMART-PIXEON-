@@ -13,22 +13,13 @@ const Cirurgias = ({setAdmin}) => {
     const [loadingData, setLoadingData] = useState(true);
 
     const fetchDataCor = async () => {
-        // try {
-        //     const reqCor = await axios.get('http://192.168.2.121:7000/cormed');
-        //     setCor(reqCor.data);
-        // } catch (error) {
-        //     console.error("Error fetching colors:", error);
-        // } finally {
-        //     setLoadingCor(false);
-        // }
-
-        const fetchDataCorTeste = async()=>{
+        const fetchDataCorAPI = async()=>{
             const data = await CorMed();
             setCor(data);
             setLoadingCor(false);
         }
 
-        fetchDataCorTeste();
+        fetchDataCorAPI();
     };
 
     const keyPress = (event) =>{
