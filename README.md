@@ -1,8 +1,20 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Painel de cirurgias - SMART(PIXEON)
 
-Currently, two official plugins are available:
+Esse sisema é responsavel por mostrar as cirurgias agendadas no dia atual com opção de indice e cor para cada médico, opção para marcar a cirurgia como concluida no painel e tabela com dados de cirurgias concluidas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+
+
+## Autores
+
+- [@Felipe-M2](https://github.com/Felipe-M2)
+
+
+## Funcionalidades
+
+- Painel principal
+- Lista de cirurgias concluidas
+- Indice de cor que representa o card médico
+- Painel ADM para gerenciamento do cadMed
+
