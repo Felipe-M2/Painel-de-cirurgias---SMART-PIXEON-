@@ -8,7 +8,7 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 
-import { CorMed } from '../../Controller';
+import { IndiceMedDia } from '../../Controller';
 
 const ModalIndice = () => {
 
@@ -16,7 +16,7 @@ const ModalIndice = () => {
 
     useEffect(()=>{
         const fetchData = async ()=>{
-            const data = await CorMed();
+            const data = await IndiceMedDia();
             setData(data);
         }
 
@@ -43,12 +43,24 @@ const ModalIndice = () => {
         <section className="ModalIndice">
             <Box sx={{ width: '100%' }}>
                 <Stack spacing={2}>
+                    <Item>
+                        Médico visitante
+                        <div className="corMed" style={{width: '50px', height: '50px', background: '#fff'}}></div>
+                    </Item>
                     {data.map((item, index)=>(
                         <Item key={index}
                             style={{cursor: 'pointer'}}
                         >
-                            {item.nome_med}
-                            <div className="corMed" style={{width: '50px', height: '50px', background: item.cor_med}}></div>
+                            {item.nome}
+                            <div 
+                                className="corMed" 
+                                style={
+                                    {width: '50px', 
+                                    height: '50px', 
+                                    background: item.cor,
+                                    borderRadius: '50%'
+                                    }
+                                }></div>
                         </Item>
                     ))}
                 </Stack>
